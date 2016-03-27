@@ -16,7 +16,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         flash('Login requested - ' + form.login.data)
-        return redirect('/index')
+        return render_template('admin.html', title='People')
     return render_template('login.html',
                             title = 'Sigh In',
                             form = form,
