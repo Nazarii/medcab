@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect
+from flask import render_template, flash
 from app import app
 from forms import LoginForm
 
@@ -18,6 +18,7 @@ def login():
         flash('Login requested - ' + form.login.data)
         return render_template('admin.html', title='People')
     return render_template('login.html',
-                            title = 'Sigh In',
-                            form = form,
-                            providers = app.config['OPENID_PROVIDERS'])
+                           title='Sigh In',
+                           form=form,
+                           providers=app.config['OPENID_PROVIDERS']
+                           )
