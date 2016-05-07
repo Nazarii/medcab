@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flask App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/ie10-viewport-bug-workaround.css") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mslogin.css') }}">
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
   </head>
   <body>
 
   <header>
     <div class="container">
-      <h1 class="logo">Flask App</h1>
+      <h1 class="logo">Medicare - Login page</h1>
       <nav>
         <ul class="menu">
           <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="{{ url_for('about') }}">About</a></li>
           <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
         </ul>
       </nav>
     </div>
