@@ -1,0 +1,30 @@
+/* To remove space between text inputs */
+.input-group > .input-group-btn:empty {
+    width: 0;
+}
+/* Fix right border radius on Bootstrap-select when is the first element */
+.input-group-btn:first-child:not(:last-child) > .bootstrap-select > button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Fix left border radius on Bootstrap-select when is the last element */
+.input-group-btn:last-child > .bootstrap-select > button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Fix border radius on Bootstrap-select and buttons when they are in the middle */
+.input-group-btn:not(:first-child):not(:last-child) > .bootstrap-select > button, .input-group-btn:not(:first-child):not(:last-child) > button {
+    border-radius: 0;
+}
+
+
+
+.doctors .caption{
+    text-align: center;
+}
+form #Patient{
+    padding-bottom: 50px;
+}
+

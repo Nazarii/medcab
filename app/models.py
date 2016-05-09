@@ -33,3 +33,13 @@ class Disease(db.Model):
     name = db.Column(db.String(128))
     description = db.Column(db.Text)
     patient_id = db.Column(db.Integer, db.ForeignKey('patient.id'))
+
+#
+# class User(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     last_name = db.Column(db.String(64))
+#     first_name = db.Column(db.String(64))
+#     father_name = db.Column(db.String(64))
+#     admin = db.Column(db.Boolean, default=False)
+#     login = db.Column(db.String(64))
+#     password = db.Column(db.)

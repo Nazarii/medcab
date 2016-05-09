@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-  <!DOCTYPE html>
-<html>
 
 <body>
 
@@ -10,9 +8,11 @@
     <form class="form-signin" action="{{ url_for('home') }}" method=post>
         <h2 class="form-signin-heading">Please Sign in</h2>
         <label for="inputLogin" class="sr-only">login</label>
-        <input type="login" id="inputLogin" class="form-control" placeholder="Login" required autofocus>
+        <input type="login" id="inputLogin" class="form-control" placeholder="Login"
+               name="login" value="{{request.form.login }}" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+               name="password" value="{{request.form.password }}" required>
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="remember-me"> Remember me
@@ -22,7 +22,6 @@
     </form>
 
 </div>
-
 </body>
-</html>
+
 {% endblock %}
