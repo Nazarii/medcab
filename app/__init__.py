@@ -18,7 +18,7 @@ users = {
 
 @auth.get_password
 def get_user_cred(username, password):
-    if username in users.keys() and password == users.get(username):
+    if username in users and password == users.get(username):
         return True
     return False
 
